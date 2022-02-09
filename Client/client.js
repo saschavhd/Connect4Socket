@@ -1,5 +1,5 @@
 // Listener
-const socket = io.connect("192.168.0.23:8080");
+const socket = io.connect("host_adress");
 
 // music w& sounds
 const gameInfoSound = new Audio('Sounds/drop.wav');
