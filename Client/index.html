@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="css/master.css">
+        <title>Connect 4</title>
+
+    </head>
+    <body>
+        <div id="wrapper">
+            <div id="main-cntr">
+
+                <div id="connection-cntr">
+                    <div id="room-connection-cntr">
+                        <input id="room-id-input">
+                        <button id="join-room-btn">Join Room</button>
+                        <button id="create-room-btn">Create Room</button>
+                    </div>
+                </div>
+
+                <div id="game-cntr">
+                    <div id="game-info-cntr">
+                        <button id="leave-room-btn">Leave Room</button>
+
+                        <button id="restart-game-btn">Restart</button>
+                        <p id="game-msg-cntr"></p>
+                    </div>
+
+                    <div id="board"></div>
+                </div>
+
+            </div>
+        </div>
+    </body>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="client.js"></script>
+</html>
