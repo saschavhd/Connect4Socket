@@ -119,8 +119,8 @@ function getRoomBySocketId(socketId) {
     return null;
 }
 
-
+const port = 8080;
 // Listener
-server.listen(8080, () => {
-    console.log('started on 8080');
+server.listen(port, () => {
+    console.log(`started on ${port}`);
 });
