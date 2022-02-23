@@ -2,7 +2,9 @@
 const socket = io.connect("host_adress");
 
 // music w& sounds
-const gameInfoSound = new Audio('Sounds/drop.wav');
+const gameInfoSound = new Audio('Sounds/game-info.wav');
+const gameErrorSound = new Audio('Sounds/game-error.wav');
+const gameWinSound = new Audio('Sounds/game-win.wav');
 gameInfoSound.autoplay = true;
 
 // Rooms & Connection DOM
@@ -159,10 +161,12 @@ socket.on('game-won', (locations) => {
         const field = document.getElementById(`field${row}${col}`);
         field.className = "field green";
     }
+    gameWinSound.play();
 });
 
 socket.on('game-error', (error) => {
     gameMsgCntr.innerText = `${error}`;
+    gameErrorSound.play();
     board.classList.add('shake');
     setTimeout(() => {
         board.classList.remove('shake');
