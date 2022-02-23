@@ -1,5 +1,5 @@
 // Listener
-const socket = io.connect("host_adress");
+const socket = io.connect($.getScript("hidden.js", () => getConnectionString()));
 
 // music w& sounds
 const gameInfoSound = new Audio('Sounds/game-info.wav');
